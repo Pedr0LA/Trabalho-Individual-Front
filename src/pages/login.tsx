@@ -8,13 +8,9 @@ import DividerAlt from "../components/dividerAlt";
 import IconeFacebook from "../components/iconeFacebook";
 import IconeGoogle from "../components/iconeGoogle";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Login() {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate("/cadastro")
-    }
   return (
     <div className="flex flex-col">
         <HeaderCadastroLogin titulo="Entrar"/>
@@ -61,9 +57,9 @@ export default function Login() {
                 </div>
                 
                 <div className="flex justify-center">
-                    <button
-                    onClick={handleClick} 
-                    className="font-montserrat text-[14px] underline text-[#0271A0]">Não possui cadastro? Cadastre-se</button>
+                    <Link
+                    to = "/cadastro"
+                    className="font-montserrat text-[14px] underline text-[#0271A0]">Não possui cadastro? Cadastre-se</Link>
                 </div>
         </div>
     </div>
