@@ -1,9 +1,9 @@
 import favorito from "../assets/favorito.png"
 
 interface CardProps {
-    imagem: string;
-    nome: string;
-    preco: string;
+    imagem: string
+    nome: string
+    preco: string
 }
 
 export default function CardProdutos(props: CardProps) {
