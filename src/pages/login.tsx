@@ -1,18 +1,23 @@
-import logo from "../../assets/logo.png"
-import HeaderCadastroLogin from "../../components/headerCadastroLogin";
-import InputTexto from "../../components/inputTexto";
-import email from "../../assets/email.png";
-import senha from "../../assets/senha.png";
-import Botao from "../../components/botao";
-import DividerAlt from "../../components/dividerAlt";
-import IconeFacebook from "../../components/iconeFacebook";
-import IconeGoogle from "../../components/iconeGoogle";
+import logo from "../assets/logo.png"
+import HeaderCadastroLogin from "../components/headerCadastroLogin";
+import InputTexto from "../components/inputTexto";
+import email from "../assets/email.png";
+import senha from "../assets/senha.png";
+import Botao from "../components/botao";
+import DividerAlt from "../components/dividerAlt";
+import IconeFacebook from "../components/iconeFacebook";
+import IconeGoogle from "../components/iconeGoogle";
+
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate("/cadastro")
+    }
   return (
     <div className="flex flex-col">
         <HeaderCadastroLogin titulo="Entrar"/>
-        <hr className="my-2 border-[#B9B9B9]" />
 
         <div className="flex flex-col p-[30px] gap-5">         
             <div className="flex flex-col gap-3">
@@ -56,7 +61,9 @@ export default function Login() {
                 </div>
                 
                 <div className="flex justify-center">
-                    <label className="font-montserrat text-[14px] underline text-[#0271A0]">Não possui cadastro? Cadastre-se</label>
+                    <button
+                    onClick={handleClick} 
+                    className="font-montserrat text-[14px] underline text-[#0271A0]">Não possui cadastro? Cadastre-se</button>
                 </div>
         </div>
     </div>

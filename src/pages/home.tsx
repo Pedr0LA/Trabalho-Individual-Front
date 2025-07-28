@@ -1,20 +1,20 @@
-import logo from "../../assets/logo.png"
+import logo from "../assets/logo.png"
 
-import HeaderHome from "../../components/headerHome";
-import FooterHome from "../../components/footerHome";
+import HeaderHome from "../components/headerHome";
+import FooterHome from "../components/footerHome";
 
 import {
   Carousel,
   CarouselContent,
-} from "../../components/ui/carousel"
-import CardProdutos from "../../components/cardProdutos";
-import produtos from "../../data/produtos"
-import DividerHome from "../../components/dividerHome";
-import categorias from "../../data/categorias";
-import IconeCategoria from "../../components/iconeCategoria";
+} from "../components/ui/carousel"
+import CardProdutos from "../components/cardProdutos";
+import produtos from "../data/produtos"
+import DividerHome from "../components/dividerHome";
+import categorias from "../data/categorias";
+import IconeCategoria from "../components/iconeCategoria";
 import Autoplay from "embla-carousel-autoplay";
-import cutscenes from "../../data/cutscene";
-import CutsceneFormatada from "../../components/cutsceneFormatada";
+import cutscenes from "../data/cutscene";
+import CutsceneFormatada from "../components/cutsceneFormatada";
 
 export default function Home() {
   return (

@@ -1,9 +1,9 @@
-import Botao from "../../components/botao";
-import DividerAlt from "../../components/dividerAlt";
-import HeaderCadastroLogin from "../../components/headerCadastroLogin";
-import IconeFacebook from "../../components/iconeFacebook";
-import IconeGoogle from "../../components/iconeGoogle";
-import InputTexto from "../../components/inputTexto";
+import Botao from "../components/botao";
+import DividerAlt from "../components/dividerAlt";
+import HeaderCadastroLogin from "../components/headerCadastroLogin";
+import IconeFacebook from "../components/iconeFacebook";
+import IconeGoogle from "../components/iconeGoogle";
+import InputTexto from "../components/inputTexto";
 
 export default function Cadastro() {
   return (

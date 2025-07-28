@@ -1,7 +1,7 @@
-import erro404 from "../../assets/erro404.png"
-import seta from "../../assets/seta.png"
+import erro404 from "../assets/erro404.png"
+import seta from "../assets/seta.png"
 
-export default function ErroNaPepsquisa() {
+export default function ErroNaPesquisa() {
   return (
     <div className="flex flex-col h-screen justify-center items-center">
         <div className="flex flex-col items-center justify-center mt-[-50px] w-full">
