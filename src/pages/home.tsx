@@ -59,7 +59,7 @@ export default function Home() {
             <div className="flex flex-col w-full">
                 <label className="font-montserrat text-[16px]">Categorias Elektro</label>
 
-                <div className="flex justify-between py-2">
+                <div className="flex justify-around py-2">
                     {categorias.slice(0, 4).map((categoria, index) => (
                         <IconeCategoria
                         key={index}
@@ -69,7 +69,7 @@ export default function Home() {
                         ))}
                 </div>
 
-                <div className="flex justify-between py-2">
+                <div className="flex justify-around py-2">
                     {categorias.slice(4, 8).map((categoria, index) => (
                         <IconeCategoria
                         key={index}
