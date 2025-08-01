@@ -15,11 +15,16 @@ import IconeCategoria from "../components/iconeCategoria";
 import Autoplay from "embla-carousel-autoplay";
 import cutscenes from "../data/cutscene";
 import CutsceneFormatada from "../components/cutsceneFormatada";
+import MenuHamburguer from "../components/menuHamburguer";
+import { useState } from "react";
 
 export default function Home() {
+    const [menuAberto, setMenuAberto] = useState(false)
+    
   return (
     <div className="flex flex-col w-screen">
-        <HeaderHome/>
+        <HeaderHome setMenuAberto={setMenuAberto} menuAberto={menuAberto}/>
+        <MenuHamburguer setMenuAberto= {setMenuAberto} menuAberto={menuAberto}/>
             
         <div className="flex flex-col w-screen gap-4 p-6">
             <div className="flex justify-center items-center">
@@ -46,24 +51,6 @@ export default function Home() {
                         imagem={cutscene.imagem}
                         />
                         ))}
-                </CarouselContent>
-            </Carousel>
-
-            <Carousel
-                plugins={[
-                    Autoplay({
-                        delay: 4000,
-                        stopOnInteraction: false
-                     }),
-                    ]}
-                opts={{
-                    watchDrag: false
-                }}    
-                >
-                <CarouselContent className="flex justify-center items-center gap-2">
-                    <div className="h-3 w-3 rounded-full bg-secondary"></div>
-                    <div className="h-3 w-3 rounded-full bg-[#DEDEDE]"></div>
-                    <div className="h-3 w-3 rounded-full bg-[#DEDEDE]"></div>
                 </CarouselContent>
             </Carousel>
 
@@ -155,7 +142,7 @@ export default function Home() {
 
         </div>
 
-        <FooterHome/>
+        <FooterHome/>  
     </div>
     );
 }
